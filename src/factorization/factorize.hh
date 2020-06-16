@@ -4,9 +4,17 @@
 class Factorize
 {
 	public:
-		void factor(long num);
-	private:
-		void printFactors(long num,long *factors);
-		void findFactors(long num,long *factors);
+		long num;
 
+		void factor();
+		void printFactors();
+
+	protected:
+		long *factors;
+		int numFactors;
+		int numpFactors;
+
+		void findFactors();
+		void sumPrimeFactors();
+		void sumFactors();
 };

@@ -9,7 +9,7 @@ using namespace::std;
 /*  Simple method to factorize a number                               */
 /*                                                                    */
 /**********************************************************************/
-void Factorize::findFactors(long num,long *factors)
+void Factorize::findFactors()
 {
 	long isFactor = 2;
 	long i = num;
@@ -26,13 +26,39 @@ void Factorize::findFactors(long num,long *factors)
 	}
 }
 
+/**********************************************************************/
+/* Find the total number of prime factors                             */
+/*                                                                    */
+/**********************************************************************/
+void Factorize::sumPrimeFactors()
+{
+	numpFactors = 0;
+	for(long i = 0; i < num; i++) numpFactors += factors[i];
+	return;
+}
+
+/**********************************************************************/
+/* Find the total number of factors and Prime factors                 */
+/*                                                                    */
+/**********************************************************************/
+void Factorize::sumFactors()
+{
+	numFactors = 1;
+	numpFactors = 0;
+	for(long i = 0; i < num; i++)
+	{
+		numpFactors += factors[i];
+		numFactors *= (factors[i] == 0) ? 1 : factors[i] + 1;
+	}
+	return;
+}
 
 /**********************************************************************/
 /* Used to print out prime factors in exponential form                */
 /*                                                                    */
 /**********************************************************************/
 
-void Factorize::printFactors(long num,long *factors)
+void Factorize::printFactors()
 {
 	cout << "Prime factorization is: ";
 	cout << num << " = ";
@@ -54,15 +80,19 @@ void Factorize::printFactors(long num,long *factors)
 		}
 	}
 	cout << endl;
+
+	sumFactors();
+	cout << "The number has " << numFactors << " factors" <<endl;
+	cout << "The number has " << numpFactors << " prime factors" <<endl;
 }
 
 /**********************************************************************/
 
-void Factorize::factor(long num)
+void Factorize::factor()
 {
-	long *factors = new long[num];
-	findFactors(num,factors);
-	printFactors(num,factors);
+	factors = new long[num];
+	findFactors();
+	printFactors();
 	
 	return;
 }
