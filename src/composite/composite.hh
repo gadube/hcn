@@ -1,7 +1,7 @@
 #include <iostream>
 #include <math.h>
 
-#include "factorize.hh"
+#include "../factorization/factorize.hh"
 
 class Composite : public Factorize
 {
@@ -12,7 +12,10 @@ class Composite : public Factorize
 
 
 	private:
+	void getFactors(Factorize *test);
 	void isHighlyComposite();
+	void notHCN();
 
 	char isHCN_;
+	long inputNum,testNum;
 };

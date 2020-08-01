@@ -81,7 +81,6 @@ void Factorize::printFactors()
 	}
 	cout << endl;
 
-	sumFactors();
 	cout << "The number has " << numFactors << " factors" <<endl;
 	cout << "The number has " << numpFactors << " prime factors" <<endl;
 }
