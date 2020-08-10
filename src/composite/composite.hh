@@ -7,6 +7,7 @@ class Composite : public Factorize
 {
 	public:
 	void checkHCN();
+	long inputNum,testNum;
 
 	protected:
 
@@ -17,5 +18,4 @@ class Composite : public Factorize
 	void notHCN();
 
 	char isHCN_;
-	long inputNum,testNum;
 };

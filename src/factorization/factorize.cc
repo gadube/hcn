@@ -13,7 +13,7 @@ void Factorize::findFactors()
 {
 	long isFactor = 2;
 	long i = num;
-	while (i > 0)  
+	while (i > 1)  
 	{
 		if (i % isFactor == 0)
 		{
@@ -90,8 +90,13 @@ void Factorize::printFactors()
 void Factorize::factor()
 {
 	factors = new long[num];
+
 	findFactors();
-	printFactors();
+
+	sumFactors();
+	sumPrimeFactors();
+
+	//printFactors();
 	
 	return;
 }

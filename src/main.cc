@@ -8,6 +8,7 @@ int main (int argc, char **argv)
 {
 	Composite number;
 	number.num = atoi(argv[1]);
+	number.inputNum = number.num;
 
 	number.checkHCN();
 

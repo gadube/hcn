@@ -7,9 +7,11 @@ class Factorize
 		long num;
 
 		void factor();
+		int getNumFactors() {return numFactors;}
+		int getNumPrimeFactors() {return numpFactors;}
 		void printFactors();
 
-	protected:
+	private:
 		long *factors;
 		int numFactors;
 		int numpFactors;
