@@ -8,9 +8,13 @@ The goal of this project is to practice programming skills on something fun that
 Inspired by this video: https://youtu.be/2JM2oImb9Qg
 
 To install:
-'''	git clone https://github.com/gadube/hcn.git
-	cd hcn/
-	make'''
+```	
+> git clone https://github.com/gadube/hcn.git
+> cd hcn/
+> make
+```
 
 To run:
-	'''./hcn <num>'''
+```
+> ./hcn <number>
+```
