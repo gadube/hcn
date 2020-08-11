@@ -3,7 +3,7 @@
 #August 2020
 
 CPP_STD=--std=c++11
-SRC=main.cc factorization/factorize.cc composite/composite.cc
+SRC=src/main.cc src/factorization/factorize.cc src/composite/composite.cc
 FLAGS=
 
 
